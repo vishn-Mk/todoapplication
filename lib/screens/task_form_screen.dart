@@ -63,7 +63,7 @@ class _TaskFormScreenState extends State<TaskFormScreen> {
     return Scaffold(
       appBar: AppBar(
         title: widget.task == null ? const Text('Add Task') : const Text('Edit Task'),
-        backgroundColor: Colors.purple, // AppBar color change
+        backgroundColor: Colors.indigo[300], // AppBar color change
         elevation: 6, // Elevation for a more prominent app bar
       ),
       body: Padding(
@@ -125,7 +125,7 @@ class _TaskFormScreenState extends State<TaskFormScreen> {
                 curve: Curves.easeInOut,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.purple, // Button color
+                    backgroundColor: Colors.white12, // Button color
                     padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 10),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),

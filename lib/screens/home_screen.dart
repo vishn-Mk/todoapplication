@@ -17,11 +17,11 @@ class HomeScreen extends StatelessWidget {
             fontSize: 22,
           ),
         ),
-        backgroundColor: Colors.purple, // Better color for app bar
-        elevation: 6, // Slight elevation for app bar
+        backgroundColor: Colors.indigo[300], // Standard app bar color
+        elevation: 4,
         actions: [
           IconButton(
-            icon: const Icon(Icons.add, color: Colors.black,size: 30,),
+            icon: const Icon(Icons.add, color: Colors.white, size: 28),
             onPressed: () {
               Navigator.push(
                 context,
@@ -35,7 +35,12 @@ class HomeScreen extends StatelessWidget {
         builder: (context, taskProvider, _) {
           final tasks = taskProvider.tasks;
           if (tasks.isEmpty) {
-            return const Center(child: Text('No tasks available.'));
+            return const Center(
+              child: Text(
+                'No tasks available.',
+                style: TextStyle(fontSize: 18, color: Colors.grey),
+              ),
+            );
           }
           return ListView.builder(
             itemCount: tasks.length,
@@ -46,11 +51,13 @@ class HomeScreen extends StatelessWidget {
                 curve: Curves.easeInOut,
                 margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                 decoration: BoxDecoration(
-                  color: task.isCompleted ? Colors.green.shade50 : Colors.white, // Dynamic background color
+                  color: task.isCompleted
+                      ? Colors.green.shade50
+                      : Colors.blueGrey.shade50, // Dynamic background color
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.4),
+                      color: Colors.black.withOpacity(0.1),
                       blurRadius: 6,
                       offset: const Offset(0, 2),
                     ),
@@ -61,18 +68,20 @@ class HomeScreen extends StatelessWidget {
                     task.title,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.deepPurple, // Title color
+                      color: task.isCompleted
+                          ? Colors.green.shade800
+                          : Colors.indigo, // Dynamic title color
                     ),
                   ),
                   subtitle: Text(
                     task.description,
-                    style: TextStyle(color: Colors.grey.shade600),
+                    style: const TextStyle(color: Colors.grey),
                   ),
                   trailing: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       IconButton(
-                        icon: const Icon(Icons.edit, color: Colors.deepPurple),
+                        icon: const Icon(Icons.edit, color: Colors.indigo),
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -89,7 +98,8 @@ class HomeScreen extends StatelessWidget {
                           task.isCompleted
                               ? Icons.check_box
                               : Icons.check_box_outline_blank,
-                          color: task.isCompleted ? Colors.green : Colors.grey,
+                          color:
+                          task.isCompleted ? Colors.green : Colors.grey,
                         ),
                         onPressed: () async {
                           task.isCompleted = !task.isCompleted;
