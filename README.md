@@ -2,6 +2,7 @@
 
 A new Flutter project.
 ToDo application is a feature-rich task management app that uses Firebase as the backend for data storage and leverages the Provider package for state management. Here's a breakdown of its key features and functionality:
+![image alt](https://github.com/vishn-Mk/todoapplication/blob/master/login.jpg?raw=true)
 
 1. Core Features
 Task Management:
@@ -52,6 +53,7 @@ Signup Screen:
 Fields for email and password with validation.
 'Sign Up' button to create a new account.
 'Login' link for navigation to the login page.
+
 
 ## Getting Started
 
