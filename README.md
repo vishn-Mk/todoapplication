@@ -54,6 +54,7 @@ Signup Screen:
 Fields for email and password with validation.
 'Sign Up' button to create a new account.
 'Login' link for navigation to the login page.
+![image alt](https://github.com/vishn-Mk/todoapplication/blob/master/homepage.jpg?raw=true)
 
 
 ## Getting Started
