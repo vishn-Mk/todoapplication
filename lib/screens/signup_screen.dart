@@ -69,6 +69,7 @@ class _SignUpState extends State<SignUp> {
           : Column(
         children: [
           // Background SVG
+          SizedBox(height: 60,),
           Container(
             height: MediaQuery.of(context).size.height * 0.2,
             child: SvgPicture.asset(
@@ -94,7 +95,7 @@ class _SignUpState extends State<SignUp> {
                           style: TextStyle(
                             fontSize: 32,
                             fontWeight: FontWeight.bold,
-                            fontFamily: "Airbnb",
+
                             color: Colors.black,
                           ),
                         ),
@@ -177,7 +178,7 @@ class _SignUpState extends State<SignUp> {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.grey,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0),
+                              borderRadius: BorderRadius.circular(20.0),
                               side: BorderSide.none,
                             ),
                             padding: EdgeInsets.symmetric(vertical: 15),

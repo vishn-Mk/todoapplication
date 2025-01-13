@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:todoapplication/provider/task_provider.dart';
 import 'package:todoapplication/screens/Login_Screen.dart';
@@ -24,7 +25,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'To-Do App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+        textTheme: GoogleFonts.montserratTextTheme(), // Apply Montserrat text theme
+        tabBarTheme: TabBarTheme( // Proper TabBarTheme object
+          labelStyle: GoogleFonts.montserrat(
+            fontWeight: FontWeight.bold,
+          ),
+          unselectedLabelStyle: GoogleFonts.montserrat(),
+          indicator: UnderlineTabIndicator(
+            borderSide: BorderSide(color: Colors.deepPurple, width: 2),
+          ),
+        ),
       ),debugShowCheckedModeBanner: false,
       home: Login(),
     );

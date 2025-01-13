@@ -177,7 +177,7 @@ class _LoginState extends State<Login> {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.grey,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0),
+                              borderRadius: BorderRadius.circular(20.0),
                             ),
                             padding:
                             const EdgeInsets.symmetric(vertical: 15),
@@ -232,7 +232,7 @@ class _LoginState extends State<Login> {
                               },
                               child: const Text(
                                 'Sign Up',
-                                style: TextStyle(color: Colors.black),
+                                style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                               ),
                             ),
                           ],
