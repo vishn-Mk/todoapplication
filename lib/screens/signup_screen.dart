@@ -22,7 +22,7 @@ class _SignUpState extends State<SignUp> {
   final TextEditingController emailController = TextEditingController();
   bool isLoading = false;
   @override
-  void despose(){
+  void dispose(){
     super.dispose();
     emailController.dispose();
     passwordController.dispose();
